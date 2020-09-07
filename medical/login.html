@@ -1,0 +1,50 @@
+<html>  
+    <head><script type="text/javascript">
+        function validate()
+        {
+            var username=document.getElementById("username").value;
+           var password=document.getElementById("password").value;
+            if(username=="")
+                {
+                    alert("please enter user name")
+                    formLogin.username.focus()
+                    return false
+                }
+            if(password=="")
+                {
+                     alert("please enter password")
+                    formLogin.password.focus()
+                    return false
+                }
+            if(username=="$susername" && password=="$spassword")
+                {
+                    alert("login succesfull");
+                    return false;
+                }
+            else
+                {
+                    alert("login failed-please enter correct username and passwor")
+                }
+        }
+        </script>
+        <title>Login
+        </title>
+
+        <link rel="stylesheet" type="text/css" href="style.css?v=<?php echo time(); ?>">
+       
+    </head>
+    <body>
+        <div class="loginbox">
+            <h1>LOGIN </h1>
+            
+            <form action="login.php" method="post"><br><br>
+		<label>USERNAME</label>
+                <input class="tp" type="text" name="uname" placeholder="ENTER USERNAME"  required><br><br>
+		<label>PASSWORD</label>
+                <input type="password" name="password" placeholder="ENTER PASSWORD" required><br><br>
+                <input type="submit" value="Login"> 
+            </form>
+               <a href="signup.html">Staff Signup</a>
+        </div> 
+	</body>
+</html>
